@@ -1,0 +1,29 @@
+import React, {useState} from 'react';
+import {View, Text, TextInput, Pressable, StyleSheet} from 'react-native'
+
+const LoginScreen = ({ navigation }) => {
+  const [email, setEmail] = useState ('');
+  const [password, setPassword] = useState ('');
+
+  const handleLogin = () => {
+    // lógico de validação e autenticação aqui
+    // ...
+    if (true) { // substitua sua lógica de autenticação
+    navigation.navigate ('HomeScreen'); // navega para a tela principal
+    } else{
+      alert ('Por favor, preencha todos os campos');
+  }
+};
+
+return (
+  <View style={styles.container}>
+
+<TextInput style={styles.input}
+placeholder="Email"
+value={email}
+
+<TextInput style={styles.input}
+placeholder="senha"
+secureTextEntry={true}
+value={passwold} 
+onchangetext={setpasswold} />
