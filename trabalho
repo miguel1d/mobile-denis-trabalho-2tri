@@ -15,21 +15,21 @@ const LoginScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={Styles.container}>
 
-    <TextInput style={styles.input}
+    <TextInput style={Styles.input}
     placeholder = "Email"
     value = {email}
     onChangeText = {setEmail} />
 
-    <TextInput style={styles.input}
+    <TextInput style={Styles.input}
     placeholder = "Senha"
     secureTextEntry = {true}
     value = {password}
     onChangeText = {setPassword} />
 
-    <Pressable style={styles.button} onPress={handleLogin}>
-      <Text style={styles.buttonText}>Entrar</Text>
+    <Pressable style={Styles.button} onPress={handleLogin}>
+      <Text style={Styles.buttonText}>Entrar</Text>
     </Pressable>
 
     </View>
@@ -43,7 +43,7 @@ const Styles = StyleSheet.create({
     flex: 1,
     jutifyContent: 'center',
     alignItens: 'center',
-    pading: 20,
+    padding: 20,
     color:'white',
   },
 
@@ -57,13 +57,18 @@ const Styles = StyleSheet.create({
     marginBottom: 10,
   },
 
-  button {
-    backgroundColor: 'AA0505'
+  button: {
+    backgroundColor: '#AA0505',
     pading: 10,
     borderRadius: 5,
-    borderColor: 'FBCA03'
-  }
+    borderColor: '#FBCA03',
+  },
 
-})
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+  },
+
+});
 
 export default LoginScreen;
